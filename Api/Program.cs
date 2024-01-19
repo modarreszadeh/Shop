@@ -14,7 +14,7 @@ builder.Services.AddDbContextPool<AppDbContext>(options =>
     options.UseNpgsql(connectionString);
 });
 
-var app = builder.Build().MigrateDatabase<AppDbContext>((_, _) => { });
+var app = builder.Build();
 
 app.UseGeneralServices();
 
